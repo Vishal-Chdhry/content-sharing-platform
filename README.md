@@ -44,8 +44,10 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-###*Learning System Design Right Now*
-## Requirements
+### *Learning System Design Right Now*
+
+## Design
+### Requirements
 1. Eventual Consistency
 2. High Availability
 3. Fault Tolerance
@@ -55,11 +57,10 @@ $ npm run test:cov
 7. __DAU:__ 10 Million
 8. __Creators:__ 100K
 
-## Conclusions
+### Conclusions
 1. More reads than writes, *ratio is 1:100*
 2. Total data per day = 100k creators * 2 video/day * 1MB/video * 3 different format * 2 for different resolutions = **1.2TB/day**
 
-## Design
 ![Flowchart](assets/Flowchart.png)
 1. We will have 3 databases, Video database *(Amazon S3)*, metadata database *(MongoDB (key value))*, userdata database *(PostgreSQL)*
 2. Since, there are 100k creators who can upload a lot of vidoes everyday, we will impliment the POST `/upload` through a queue.
