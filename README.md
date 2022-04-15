@@ -23,13 +23,11 @@ docker compose up dev-db -d
 
 ```bash
 # development
-$ npm run start
+$ npm run start:ts
 
 # watch mode
-$ npm run start:dev
+$ npm run dev:ts
 
-# production mode
-$ npm run start:prod
 ```
 
 ### Testing
